@@ -99,6 +99,15 @@ platforms:
     - id: "zhihu"
       name: "知乎"
       expected_domain: "zhihu.com"
+    - id: "jin10"
+      name: "金十数据"
+      expected_domain: "jin10.com"
+    - id: "xueqiu-hotstock"
+      name: "雪球热股"
+      expected_domain: "xueqiu.com"
+    - id: "cls-telegraph"
+      name: "财联社电报"
+      expected_domain: "cls.cn"
 
 
 
@@ -127,26 +136,25 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
+    # === 国际科技/财经 ===
     - id: "hacker-news"
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
 
+    - id: "seeking-alpha"
+      name: "Seeking Alpha"
+      url: "https://seekingalpha.com/feed.xml"
+
+    - id: "cnbc-top"
+      name: "CNBC 头条"
+      url: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"
+
+    # === 科技/博客 ===
     - id: "ruanyifeng"
       name: "阮一峰的网络日志"
       url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false                  # 禁用
-      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
-     
-    - id: "yahoo-finance"
-      name: "雅虎财经"
-      url: "https://finance.yahoo.com/news/rssindex"
-
-    # 自定义源示例
-    # - id: "custom-feed"
-    #   name: "自定义源"
-    #   url: "https://example.com/feed.xml"
-    #   enabled: false
-    #   max_age_days: 0               # 示例：禁用过滤，推送所有文章
+      enabled: false                  # 禁用（更新较慢）
+      # max_age_days: 3               # 示例：推送 3 天内的文章
 
 
 # ===============================================================
